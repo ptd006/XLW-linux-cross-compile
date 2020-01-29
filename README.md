@@ -18,6 +18,8 @@ http://sourceforge.net/p/xlw/code/
 
 4) Build the interface generator by going to xlw/build/gcc-make: 
 `cd build/gcc-make`
+
+
 `make -f InterfaceGenerator.mak BUILD=RELEASE`
 
 This will give InterfaceGenerator.exe in xlw/build/gcc-make/RELEASE/BIN
@@ -30,6 +32,7 @@ compiler at this step.
 5) Check the interface generator works OK with the example provided.
 
 `cd xlw/examples/Start Here - Example/common_source`
+
 `../../../build/gcc-make/RELEASE/BIN/InterfaceGenerator.exe Test.h xlwTest.cpp`
 
 This should generate a xlwTest.cpp, which calls all the XLW specific code to
@@ -70,6 +73,8 @@ Excel plugin as follows:
 
 
 `make PLATFORM=x64 BUILD=RELEASE XLW=../../../..`
+
+
 `make PLATFORM=x32 BUILD=RELEASE XLW=../../../..`
 
 
@@ -87,6 +92,8 @@ Revisited these notes after making a minor changes to my [Excel PlutoTaschePD ca
 
 Files committed here based on modification date, ASCII only, and ignoring the files in `examples/Start Here - Example`:
 `find . -type f -newermt '9/27/2015 0:00:00' > modified_files.txt`
+
+
 `file -f /tmp/modified_files.txt | awk -F: '/ASCII text/ {print $1}' | grep -v git | xargs -d'\n'`
 
 
