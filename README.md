@@ -83,7 +83,7 @@ then:
 
 ## 2020 Update
 
-Revisited these notes after making a minor changes to my ![Excel PlutoTaschePD calculator](https://peter.windridge.org.uk/home/fast-pluto-tasche-pd-calculator-for-excel).
+Revisited these notes after making a minor changes to my [Excel PlutoTaschePD calculator](https://peter.windridge.org.uk/home/fast-pluto-tasche-pd-calculator-for-excel).
 
 Files committed here based on modification date, ASCII only, and ignoring the files in `examples/Start Here - Example`:
 `find . -type f -newermt '9/27/2015 0:00:00' > modified_files.txt`
