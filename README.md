@@ -1,6 +1,10 @@
 # Setup a cross compiler and XLW build environment 
 
-Originally tested on Ubuntu 14.04LTS.
+Tested InterfaceGenerator compilation run on Ubuntu 19.10.  Originally tested on Ubuntu 14.04LTS.  
+
+XLW version used `XLW_VERSION "5.0.2f0"`.
+
+*The modified files have been committed to this repository (please see final comment!)*
 
 1) Install the mingw-w64 package:
 `sudo apt-get install mingw-w64`
@@ -13,6 +17,7 @@ http://sourceforge.net/p/xlw/code/
 3) Correct the directory paths in xlw/make/make.targets, near the end.  
 
 4) Build the interface generator by going to xlw/build/gcc-make: 
+`cd build/gcc-make`
 `make -f InterfaceGenerator.mak BUILD=RELEASE`
 
 This will give InterfaceGenerator.exe in xlw/build/gcc-make/RELEASE/BIN
@@ -74,6 +79,16 @@ Excel plugin as follows:
 
 then:
 `make -f XLL.mak PLATFORM=x32 BUILD=RELEASE XLW=xlw`
+
+
+## 2020 Update
+
+Revisited these notes after making a minor changes to my ![Excel PlutoTaschePD calculator](https://peter.windridge.org.uk/home/fast-pluto-tasche-pd-calculator-for-excel).
+
+Files committed here based on modification date, ASCII only, and ignoring the files in `examples/Start Here - Example`:
+`find . -type f -newermt '9/27/2015 0:00:00' > modified_files.txt`
+`file -f /tmp/modified_files.txt | awk -F: '/ASCII text/ {print $1}' | grep -v git | xargs -d'\n'`
+
 
 
 
