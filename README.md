@@ -1,5 +1,6 @@
-Setup a cross compiler and XLW build environment on Ubuntu 14.04LTS
--------------------------------------------------------------------
+# Setup a cross compiler and XLW build environment 
+
+Originally tested on Ubuntu 14.04LTS.
 
 1) Install the mingw-w64 package:
 `sudo apt-get install mingw-w64`
@@ -74,5 +75,5 @@ Excel plugin as follows:
 then:
 `make -f XLL.mak PLATFORM=x32 BUILD=RELEASE XLW=xlw`
 
-# XLW-linux-cross-compile
+
 
